@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- 首頁 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 關於協會 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/about.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 協會章程 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/charter.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 協會組織 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/organization.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 最新消息 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/news.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 公告事項 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/announcements.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 特技大鼎 BIG TOP -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/bigtop.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- 第二屆特技大鼎（2025） -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/bigtop-2.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 第一屆特技大鼎（2023） -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/bigtop-1.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- 協會發展 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/development.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 表單下載 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/downloads.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 2025衛武營國際講座 -->
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/weiwuying-2025.html</loc>
+    <lastmod>2026-06-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/news-china-troupe.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/news-2022-assembly.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://taiwanacrodance.zeabur.app/news-2022-board.html</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+</urlset>

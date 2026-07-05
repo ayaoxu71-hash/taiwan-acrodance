@@ -1,0 +1,10 @@
+# robots.txt - 臺灣特技舞蹈協會
+# ⚠️ 上線後請把下方兩處網址改成你的正式網域
+#    （例如 https://你的帳號.github.io/repo名稱/ 或自訂網域）
+
+# 允許所有搜尋引擎爬取全站（含圖片、CSS，有助於 SEO 與圖片搜尋）
+User-agent: *
+Allow: /
+
+# Sitemap 位置（告訴 Google 有哪些頁面）
+Sitemap: https://taiwanacrodance.zeabur.app/sitemap.xml
