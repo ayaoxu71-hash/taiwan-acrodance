@@ -40,9 +40,10 @@ const newsData = [
 // ===== LANGUAGE DATA =====
 const i18n = {
   zh: {
-    nav_news: '最新消息', nav_about: '關於協會', nav_intro: '協會簡介',
-    nav_charter: '協會章程', nav_org: '協會組織',
+    nav_news: '最新消息', nav_about: '關於協會 ▾', nav_intro: '協會簡介',
+    nav_charter: '協會章程', nav_org: '協會組織', nav_bigtop: '特技大鼎', nav_dev: '協會發展',
     nav_announce: '公告事項', nav_contact: '聯絡我們', nav_download: '表單下載',
+    footer_bigtop: '特技大鼎 BIG TOP', c_web_label: '官方網站',
     hero_badge: '台灣 · 馬戲特技 · 國際交流',
     hero_title: '臺灣特技舞蹈協會',
     hero_en: 'TAIWAN ACROBATIC DANCE ASSOCIATION',
@@ -83,12 +84,13 @@ const i18n = {
     form_msg: '訊息內容', form_send: '用 Email 傳送',
     footer_desc: '臺灣特技舞蹈協會於111年成立，致力推展特技舞蹈教育，培育表演藝術跨域人才，促進產業生態發展，擴大特技舞蹈國際能量。',
     footer_about: '關於協會', footer_service: '服務項目', footer_connect: '聯絡資訊',
-    copyright: '版權所有 © 2026 臺灣特技舞蹈協會'
+    copyright: '版權所有 © 2026 <span class="assoc-name">臺灣特技舞蹈協會</span>'
   },
   en: {
-    nav_news: 'News', nav_about: 'About', nav_intro: 'Introduction',
-    nav_charter: 'Charter', nav_org: 'Organization',
+    nav_news: 'News', nav_about: 'About ▾', nav_intro: 'Introduction',
+    nav_charter: 'Charter', nav_org: 'Organization', nav_bigtop: 'BIG TOP', nav_dev: 'Development',
     nav_announce: 'Announcements', nav_contact: 'Contact', nav_download: 'Downloads',
+    footer_bigtop: 'BIG TOP Awards', c_web_label: 'Official Website',
     hero_badge: 'TAIWAN · CIRCUS · INTERNATIONAL EXCHANGE',
     hero_title: '臺灣特技舞蹈協會',
     hero_en: 'TAIWAN ACROBATIC DANCE ASSOCIATION',
@@ -129,12 +131,16 @@ const i18n = {
     form_msg: 'Message', form_send: 'Send via Email',
     footer_desc: 'Founded in 2022, TADA promotes acrobatic dance education, cross-domain talent, professional certification and international cultural exchange.',
     footer_about: 'About', footer_service: 'Services', footer_connect: 'Contact',
-    copyright: 'Copyright © 2026 Taiwan Acrobatic Dance Association'
+    copyright: 'Copyright © 2026 <span class="assoc-name">Taiwan Acrobatic Dance Association</span>'
   }
 };
 
 // ===== STATE =====
-let currentLang = 'zh';
+// 語言選擇存在 localStorage（key: tada_lang），跨頁面共用
+function getSavedLang() {
+  try { return localStorage.getItem('tada_lang') === 'en' ? 'en' : 'zh'; } catch (e) { return 'zh'; }
+}
+let currentLang = getSavedLang();
 
 // ===== ANNOUNCEMENT BAR =====
 function initAnnouncementBar() {
@@ -143,8 +149,8 @@ function initAnnouncementBar() {
   bar.id = 'announcementBar';
   bar.innerHTML = `
     <span>🎪</span>
-    <span>第二屆「特技大鼎 BIG TOP」得獎名單出爐！</span>
-    <a href="bigtop-2.html">查看詳情 →</a>
+    <span><span class="i18n-zh">第二屆「特技大鼎 BIG TOP」得獎名單出爐！</span><span class="i18n-en">2nd BIG TOP Awards — winners announced!</span></span>
+    <a href="bigtop-2.html"><span class="i18n-zh">查看詳情 →</span><span class="i18n-en">Details →</span></a>
     <button id="announcementClose" aria-label="關閉公告">✕</button>
   `;
   document.body.prepend(bar);
@@ -164,7 +170,7 @@ function initBackToHome() {
   if (!container) return;
   const wrap = document.createElement('div');
   wrap.className = 'back-home-wrap';
-  wrap.innerHTML = `<a href="#hero" class="back-to-home">🏠 回到頂端</a>`;
+  wrap.innerHTML = `<a href="#hero" class="back-to-home">🏠 <span class="i18n-zh">回到頂端</span><span class="i18n-en">Back to Top</span></a>`;
   container.insertBefore(wrap, container.firstChild);
 }
 initBackToHome();
@@ -192,6 +198,7 @@ document.querySelectorAll('.nav-link').forEach(l => {
 // ===== LANGUAGE =====
 function setLang(lang) {
   currentLang = lang;
+  try { localStorage.setItem('tada_lang', lang); } catch (e) { /* 私密模式等情況忽略 */ }
   const t = i18n[lang];
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -199,6 +206,7 @@ function setLang(lang) {
   });
   document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
   document.documentElement.lang = lang === 'zh' ? 'zh-TW' : 'en';
+  document.documentElement.setAttribute('data-lang', lang); // 讓 .i18n-zh / .i18n-en 元素同步切換
 }
 document.querySelectorAll('.lang-btn').forEach(b => {
   b.addEventListener('click', () => setLang(b.dataset.lang));
@@ -297,4 +305,4 @@ if (form) {
 }
 
 // ===== INIT =====
-window.addEventListener('DOMContentLoaded', () => { setLang('zh'); });
+window.addEventListener('DOMContentLoaded', () => { setLang(getSavedLang()); });

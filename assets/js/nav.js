@@ -1,3 +1,29 @@
+// ===== 語言狀態（跨頁記憶，子頁共用）=====
+// 子頁採「雙語內容 + CSS 切換」：頁面同時含 .i18n-zh / .i18n-en 內容，
+// 由 <html data-lang> 決定顯示哪一種（規則在 style.css）。
+function getSavedLang() {
+  try { return localStorage.getItem('tada_lang') === 'en' ? 'en' : 'zh'; } catch (e) { return 'zh'; }
+}
+
+function setPageLang(lang) {
+  try { localStorage.setItem('tada_lang', lang); } catch (e) { /* 私密模式等情況忽略 */ }
+  const html = document.documentElement;
+  html.setAttribute('data-lang', lang);
+  html.lang = lang === 'zh' ? 'zh-TW' : 'en';
+  // 頁面標題切換（<title data-en="..."> 提供英文標題）
+  const titleEl = document.querySelector('title');
+  if (titleEl) {
+    if (!titleEl.dataset.zh) titleEl.dataset.zh = titleEl.textContent;
+    document.title = (lang === 'en' && titleEl.dataset.en) ? titleEl.dataset.en : titleEl.dataset.zh;
+  }
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+}
+
+// 產生「中/英」雙語標籤 HTML
+function biLabel(zh, en) {
+  return `<span class="i18n-zh">${zh}</span><span class="i18n-en">${en}</span>`;
+}
+
 // ===== ANNOUNCEMENT BAR (shared) =====
 function initAnnouncementBar() {
   if (document.getElementById('announcementBar')) return;
@@ -6,8 +32,8 @@ function initAnnouncementBar() {
   bar.id = 'announcementBar';
   bar.innerHTML = `
     <span>🎪</span>
-    <span>第二屆「特技大鼎 BIG TOP」得獎名單出爐！</span>
-    <a href="bigtop-2.html">查看詳情 →</a>
+    <span>${biLabel('第二屆「特技大鼎 BIG TOP」得獎名單出爐！', '2nd BIG TOP Awards — winners announced!')}</span>
+    <a href="bigtop-2.html">${biLabel('查看詳情 →', 'Details →')}</a>
     <button id="announcementClose" aria-label="關閉公告">✕</button>
   `;
   document.body.prepend(bar);
@@ -45,7 +71,7 @@ function initBackToHome() {
   const wrap = document.createElement('div');
   wrap.className = 'back-home-wrap';
   // href 保留 index.html 當作後備（無上一頁或關閉 JS 時仍可用）
-  wrap.innerHTML = `<a href="index.html" class="back-to-home" onclick="return goBackOrHome(event)">↩ 回到上一頁</a>`;
+  wrap.innerHTML = `<a href="index.html" class="back-to-home" onclick="return goBackOrHome(event)">↩ ${biLabel('回到上一頁', 'Back')}</a>`;
   container.insertBefore(wrap, container.firstChild);
 }
 
@@ -84,22 +110,27 @@ function initNav(activePage) {
     <div class="nav-menu" id="navMenu">
       ${navLinks.map(l => l.hasDropdown ? `
         <div class="nav-item dropdown">
-          <a class="nav-link${l.children.some(c=>c.href.replace('.html','')===activePage)?' active':''}" href="#">${l.zh} ▾</a>
+          <a class="nav-link${l.children.some(c=>c.href.replace('.html','')===activePage)?' active':''}" href="#">${biLabel(l.zh, l.en)} ▾</a>
           <div class="dropdown-menu">
-            ${l.children.map(c=>`<a href="${c.href}"${c.href.replace('.html','')===activePage?' style="color:var(--gold)"':''}>${c.zh}</a>`).join('')}
+            ${l.children.map(c=>`<a href="${c.href}"${c.href.replace('.html','')===activePage?' style="color:var(--gold)"':''}>${biLabel(c.zh, c.en)}</a>`).join('')}
           </div>
         </div>` : `
         <div class="nav-item">
-          <a class="nav-link${l.id===activePage?' active':''}" href="${l.href}">${l.zh}</a>
+          <a class="nav-link${l.id===activePage?' active':''}" href="${l.href}">${biLabel(l.zh, l.en)}</a>
         </div>`
       ).join('')}
       <div class="lang-toggle">
-        <button class="lang-btn active" onclick="this.classList.add('active');this.nextElementSibling.classList.remove('active')">中</button>
-        <button class="lang-btn" onclick="this.classList.add('active');this.previousElementSibling.classList.remove('active')">EN</button>
+        <button class="lang-btn" data-lang="zh">中</button>
+        <button class="lang-btn" data-lang="en">EN</button>
       </div>
     </div>
-    <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+    <button class="nav-toggle" id="navToggle" aria-label="開啟選單"><span></span><span></span><span></span></button>
   `;
+
+  // 語言切換按鈕
+  nav.querySelectorAll('.lang-btn').forEach(b => {
+    b.addEventListener('click', () => setPageLang(b.dataset.lang));
+  });
 
   document.getElementById('navToggle').addEventListener('click', () => {
     document.getElementById('navMenu').classList.toggle('open');
@@ -113,4 +144,7 @@ function initNav(activePage) {
   // Inject announcement bar + back-to-home button on every sub-page
   initAnnouncementBar();
   initBackToHome();
+
+  // 套用已記憶的語言（含跨頁延續）
+  setPageLang(getSavedLang());
 }

@@ -27,18 +27,14 @@ function renderNews(lang) {
   grid.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 }
 
-// Patch setLang to also render news
-const _origSetLang = setLang;
-// Override setLang to additionally render news
+// Override setLang so switching language also re-renders the news grid.
+// main.js 的語言按鈕與 DOMContentLoaded 都是以全域 setLang 呼叫，
+// 覆寫後會自動套用，不需重複綁定事件或重複初始化。
 const origSetLang = setLang;
 window.setLang = function(lang) {
   origSetLang(lang);
   renderNews(lang);
 };
-// Re-bind lang buttons
-document.querySelectorAll('.lang-btn').forEach(b => {
-  b.onclick = () => window.setLang(b.dataset.lang);
-});
 
 // ===== EXTRA i18n KEYS =====
 i18n.zh = Object.assign(i18n.zh, {
@@ -68,8 +64,4 @@ i18n.en = Object.assign(i18n.en, {
   role_super: 'Standing Supervisor', role_supers: 'Supervisors'
 });
 
-// Init on load
-window.addEventListener('DOMContentLoaded', () => {
-  window.setLang('zh');
-  renderNews('zh');
-});
+// 初始化由 main.js 的 DOMContentLoaded → setLang('zh') 觸發（已被上方覆寫，會一併渲染新聞）。
