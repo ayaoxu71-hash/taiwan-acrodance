@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="google-site-verification" content="1In2v6ITkVFuMZr4_m_cdU1FupszhSFAYtIJbOukS24" />
+  <title>臺灣特技舞蹈協會 | Taiwan Acrobatic Dance Association</title>
+  <meta name="description" content="臺灣特技舞蹈協會致力推動台灣馬戲特技藝術發展，促進國際文化交流與合作。Taiwan Acrobatic Dance Association promotes circus arts and international exchange." />
+  <meta name="keywords" content="臺灣特技舞蹈協會,台灣馬戲,特技,舞蹈,國際交流,circus,acrobatic,Taiwan" />
+  <meta property="og:title" content="臺灣特技舞蹈協會" />
+  <meta property="og:description" content="推動台灣馬戲特技藝術發展，促進國際文化交流" />
+  <meta property="og:type" content="website" />
+  <!-- ⚠️ 上線後把下面 og:url 和 og:image 的網址改成你的正式網域 -->
+  <meta property="og:url" content="https://taiwanacrodance.zeabur.app/" />
+  <meta property="og:image" content="https://taiwanacrodance.zeabur.app/assets/images/hero-banner.png" />
+  <meta property="og:site_name" content="臺灣特技舞蹈協會" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="臺灣特技舞蹈協會 Taiwan Acrobatic Dance Association" />
+  <meta name="twitter:description" content="推動台灣馬戲特技藝術發展，促進國際文化交流" />
+  <meta name="twitter:image" content="https://taiwanacrodance.zeabur.app/assets/images/hero-banner.png" />
+  <link rel="stylesheet" href="assets/css/style.css?v=light4" />
+  <link rel="stylesheet" href="assets/css/pages.css?v=light4" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav id="navbar" role="navigation" aria-label="主選單">
+  <a href="#hero" class="nav-logo" id="navLogo">
+    <div class="logo-placeholder" id="logoPlaceholder">🎪</div>
+    <div class="logo-text">
+      <span class="zh">臺灣特技舞蹈協會</span>
+      <span class="en">TAIWAN ACROBATIC DANCE ASSOC.</span>
+    </div>
+  </a>
+
+  <div class="nav-menu" id="navMenu">
+    <div class="nav-item">
+      <a class="nav-link" href="news.html" data-i18n="nav_news">最新消息</a>
+    </div>
+    <div class="nav-item dropdown">
+      <a class="nav-link" href="#" data-i18n="nav_about">關於協會 ▾</a>
+      <div class="dropdown-menu">
+        <a href="about.html" data-i18n="nav_intro">協會簡介</a>
+        <a href="charter.html" data-i18n="nav_charter">協會章程</a>
+        <a href="organization.html" data-i18n="nav_org">協會組織</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="development.html" data-i18n="nav_dev">協會發展</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="bigtop.html" data-i18n="nav_bigtop">特技大鼎</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="announcements.html" data-i18n="nav_announce">公告事項</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="#contact" data-i18n="nav_contact">聯絡我們</a>
+    </div>
+    <div class="nav-item">
+      <a class="nav-link" href="downloads.html" data-i18n="nav_download">表單下載</a>
+    </div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="zh">中</button>
+      <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+  </div>
+
+  <button class="nav-toggle" id="navToggle" aria-label="開啟選單">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero" aria-label="首頁英雄區">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <canvas id="particles" class="hero-particles"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge" data-i18n="hero_badge">台灣 · 馬戲特技 · 國際交流</div>
+    <h1 class="hero-title-zh" data-i18n="hero_title">臺灣特技舞蹈協會</h1>
+    <div class="hero-title-en" data-i18n="hero_en">TAIWAN ACROBATIC DANCE ASSOCIATION</div>
+    <div class="hero-divider"></div>
+    <p class="hero-slogan" data-i18n="hero_slogan">推動台灣馬戲特技藝術發展<br>促進國際文化交流與合作</p>
+    <div class="hero-cta">
+      <a href="about.html" class="btn-outline" data-i18n="hero_btn1">瞭解協會</a>
+      <a href="news.html" class="btn-primary" data-i18n="hero_btn2">最新消息</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span data-i18n="hero_scroll">SCROLL</span></div>
+</section>
+
+<!-- ===== ABOUT INTRO ===== -->
+<section id="about" aria-label="協會簡介">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="about_tag">協會簡介</span>
+      <h2 class="section-title" data-i18n="about_title">關於臺灣特技舞蹈協會</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p class="about-desc" data-i18n="about_desc">臺灣特技舞蹈協會成立於臺灣臺北，111年由陳碧涵、林佳鋒、李曉蕾等34人發起後組織籌備委員會。同年7月公開招募會員，8月28日辦理第一屆會員大會，9月4日召開第一屆第一次理監事聯席會議，最終由林佳鋒當選第一屆理事長。</p>
+        <div class="purpose-list">
+          <div class="purpose-item reveal reveal-delay-1">
+            <div class="purpose-dot"></div>
+            <p data-i18n="purpose1">本會為依法設立、非以營利為目的社會團體。</p>
+          </div>
+          <div class="purpose-item reveal reveal-delay-2">
+            <div class="purpose-dot"></div>
+            <p data-i18n="purpose2">推展特技舞蹈教育，培育表演藝術跨域人才。</p>
+          </div>
+          <div class="purpose-item reveal reveal-delay-3">
+            <div class="purpose-dot"></div>
+            <p data-i18n="purpose3">建構專業證照檢定，鏈結產業需求。</p>
+          </div>
+          <div class="purpose-item reveal reveal-delay-4">
+            <div class="purpose-dot"></div>
+            <p data-i18n="purpose4">促進產業生態發展，擴大特技舞蹈國際能量。</p>
+          </div>
+        </div>
+        <a href="about.html" class="btn-more" style="margin-top:24px;display:inline-flex">
+          <span data-i18n="about_more">閱讀更多</span> →
+        </a>
+      </div>
+      <div class="about-org reveal">
+        <div class="org-card">
+          <h3 class="org-title" data-i18n="org_title">第一屆理監事</h3>
+          <div class="org-list">
+            <div class="org-row"><span class="org-role" data-i18n="role_chair">理事長</span><span class="org-name">林佳鋒</span></div>
+            <div class="org-row"><span class="org-role" data-i18n="role_honor">榮譽顧問</span><span class="org-name">陳碧涵</span></div>
+            <div class="org-row"><span class="org-role" data-i18n="role_exec">執行長</span><span class="org-name">吳瑛芳</span></div>
+            <div class="org-row"><span class="org-role" data-i18n="role_vchair">副理事長</span><span class="org-name">陳建和</span></div>
+            <div class="org-row"><span class="org-role" data-i18n="role_director">常務理事</span><span class="org-name">李曉蕾</span></div>
+            <div class="org-row"><span class="org-role" data-i18n="role_directors">理事</span><span class="org-name">程育君、古品杰、杜偉誠、孫正學、楊立微、劉彥廷</span></div>
+            <div class="org-row"><span class="org-role" data-i18n="role_super">常務監事</span><span class="org-name">張京嵐</span></div>
+            <div class="org-row"><span class="org-role" data-i18n="role_supers">監事</span><span class="org-name">陳儒文、王偉帆</span></div>
+          </div>
+          <a href="organization.html" class="btn-more" style="margin-top:20px;font-size:13px">
+            <span data-i18n="org_more">查看完整組織</span> →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MISSION ===== -->
+<section id="mission" aria-label="協會使命">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="mission_tag">核心任務</span>
+      <h2 class="section-title" data-i18n="mission_title">協會使命</h2>
+      <p class="section-subtitle" data-i18n="mission_sub">致力推動台灣特技舞蹈產業全面發展</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="mission-grid">
+      <div class="mission-card reveal reveal-delay-1">
+        <div class="mission-icon">🎓</div>
+        <h3 class="mission-title" data-i18n="m1_title">人才培育</h3>
+        <p class="mission-desc" data-i18n="m1_desc">培訓專業特技舞蹈人才，建立完善的教育體系與認證制度</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-2">
+        <div class="mission-icon">🌏</div>
+        <h3 class="mission-title" data-i18n="m2_title">國際交流</h3>
+        <p class="mission-desc" data-i18n="m2_desc">積極推動台灣特技藝術走向國際舞台，促進跨文化交流</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-3">
+        <div class="mission-icon">🏗️</div>
+        <h3 class="mission-title" data-i18n="m3_title">產業發展</h3>
+        <p class="mission-desc" data-i18n="m3_desc">扶植特技舞蹈相關產業，建立健全的生態體系</p>
+      </div>
+      <div class="mission-card reveal reveal-delay-4">
+        <div class="mission-icon">🛡️</div>
+        <h3 class="mission-title" data-i18n="m4_title">職場安全</h3>
+        <p class="mission-desc" data-i18n="m4_desc">維護特技舞蹈從業者的職業安全與身心健康</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DEVELOPMENT ===== -->
+<section id="development" aria-label="協會發展方向">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="dev_tag">六大方向</span>
+      <h2 class="section-title" data-i18n="dev_title">協會發展</h2>
+      <div class="section-line"></div>
+    </div>
+    <div class="dev-grid">
+      <a class="dev-card reveal reveal-delay-1" href="development.html">
+        <div class="dev-num">01</div>
+        <div class="dev-icon">🏗️</div>
+        <h3 class="dev-title" data-i18n="d1">協會發展</h3>
+        <p class="dev-desc" data-i18n="d1d">持續壯大協會規模，擴大影響力與服務範疇</p>
+      </a>
+      <a class="dev-card reveal reveal-delay-2" href="development.html#training">
+        <div class="dev-num">02</div>
+        <div class="dev-icon">🎓</div>
+        <h3 class="dev-title" data-i18n="d2">專業課程人才培育</h3>
+        <p class="dev-desc" data-i18n="d2d">規劃系統性課程，培育下一代特技舞蹈專才</p>
+      </a>
+      <a class="dev-card reveal reveal-delay-3" href="development.html#cert">
+        <div class="dev-num">03</div>
+        <div class="dev-icon">📜</div>
+        <h3 class="dev-title" data-i18n="d3">專業證照檢定</h3>
+        <p class="dev-desc" data-i18n="d3d">建立國家級專業證照制度，提升產業標準</p>
+      </a>
+      <a class="dev-card reveal reveal-delay-1" href="development.html#industry">
+        <div class="dev-num">04</div>
+        <div class="dev-icon">🌱</div>
+        <h3 class="dev-title" data-i18n="d4">產業生態發展及需求</h3>
+        <p class="dev-desc" data-i18n="d4d">研析產業需求，促進特技舞蹈生態系統健全發展</p>
+      </a>
+      <a class="dev-card reveal reveal-delay-2" href="development.html#intl">
+        <div class="dev-num">05</div>
+        <div class="dev-icon">✈️</div>
+        <h3 class="dev-title" data-i18n="d5">國際交流活動</h3>
+        <p class="dev-desc" data-i18n="d5d">舉辦及參與國際賽事、展演與文化交流活動</p>
+      </a>
+      <a class="dev-card reveal reveal-delay-3" href="development.html#safety">
+        <div class="dev-num">06</div>
+        <div class="dev-icon">🛡️</div>
+        <h3 class="dev-title" data-i18n="d6">特技舞蹈職場安全與健康</h3>
+        <p class="dev-desc" data-i18n="d6d">推動職業安全教育，保障從業人員身心健康</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWS ===== -->
+<section id="news" aria-label="最新消息">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="news_tag">動態消息</span>
+      <h2 class="section-title" data-i18n="news_title">最新消息</h2>
+      <p class="section-subtitle" data-i18n="news_sub">掌握協會最新活動與公告資訊</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="news-grid" id="newsGrid">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="news-more reveal">
+      <a href="news.html" class="btn-more">
+        <span data-i18n="news_more">查看全部消息</span> →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTERNATIONAL ===== -->
+<section id="international" aria-label="國際交流">
+  <div class="container">
+    <div class="intl-content">
+      <div class="intl-text">
+        <div class="section-header reveal">
+          <span class="section-tag" data-i18n="intl_tag">國際舞台</span>
+          <h2 class="section-title" data-i18n="intl_title">國際交流</h2>
+          <p class="section-subtitle" data-i18n="intl_sub">連結世界，讓台灣特技藝術閃耀國際</p>
+          <div class="section-line"></div>
+        </div>
+        <p class="intl-desc reveal" data-i18n="intl_desc">臺灣特技舞蹈協會積極推動台灣特技藝術走向世界舞台，與多個國際組織及藝術團體建立合作關係，推動文化交流，提升台灣馬戲特技在國際上的能見度與影響力。</p>
+        <div class="intl-stats reveal">
+          <div class="stat-item">
+            <div class="stat-num" data-val="20" data-suffix="+" data-i18n="stat1_num">20+</div>
+            <div class="stat-label" data-i18n="stat1_label">合作國家</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-val="50" data-suffix="+" data-i18n="stat2_num">50+</div>
+            <div class="stat-label" data-i18n="stat2_label">國際活動</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num" data-val="10" data-suffix="+" data-i18n="stat3_num">10+</div>
+            <div class="stat-label" data-i18n="stat3_label">合作機構</div>
+          </div>
+        </div>
+      </div>
+      <div class="intl-visual reveal">
+        <div class="intl-country-item">
+          <span class="country-flag">🇯🇵</span>
+          <div class="country-info">
+            <div class="country-name">日本 Japan</div>
+            <div class="country-type">文化交流 / Cultural Exchange</div>
+          </div>
+        </div>
+        <div class="intl-country-item">
+          <span class="country-flag">🇫🇷</span>
+          <div class="country-info">
+            <div class="country-name">法國 France</div>
+            <div class="country-type">馬戲藝術合作 / Circus Arts</div>
+          </div>
+        </div>
+        <div class="intl-country-item">
+          <span class="country-flag">🇨🇦</span>
+          <div class="country-info">
+            <div class="country-name">加拿大 Canada</div>
+            <div class="country-type">國際演出 / International Performance</div>
+          </div>
+        </div>
+        <div class="intl-country-item">
+          <span class="country-flag">🇰🇷</span>
+          <div class="country-info">
+            <div class="country-name">韓國 Korea</div>
+            <div class="country-type">亞洲交流 / Asia Exchange</div>
+          </div>
+        </div>
+        <div class="intl-country-item">
+          <span class="country-flag">🇩🇪</span>
+          <div class="country-info">
+            <div class="country-name">德國 Germany</div>
+            <div class="country-type">技術培訓 / Technical Training</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GALLERY ===== -->
+<section id="gallery" aria-label="影像紀錄">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="gallery_tag">影像紀錄</span>
+      <h2 class="section-title" data-i18n="gallery_title">精彩時刻</h2>
+      <p class="section-subtitle" data-i18n="gallery_sub">精彩演出與活動照片（即將上傳）</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item large">
+        <div class="gallery-placeholder"><div>📸</div><p data-i18n="photo_coming">照片即將上傳</p></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><div>🎪</div></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><div>🤸</div></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><div>🎭</div></div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder"><div>✨</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" aria-label="聯絡我們">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag" data-i18n="contact_tag">聯絡資訊</span>
+      <h2 class="section-title" data-i18n="contact_title">聯絡我們</h2>
+      <p class="section-subtitle" data-i18n="contact_sub">歡迎來信詢問合作事宜</p>
+      <div class="section-line"></div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <div class="contact-label" data-i18n="c_email_label">電子郵件</div>
+            <div class="contact-value"><a href="mailto:taiwanacrodance.ep@gmail.com">taiwanacrodance.ep@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label" data-i18n="c_addr_label">協會地址</div>
+            <div class="contact-value" data-i18n="c_addr_val">11664 台北市文山區木新路二段156之1號</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🏢</div>
+          <div>
+            <div class="contact-label" data-i18n="c_tax_label">統一編號</div>
+            <div class="contact-value" data-i18n="c_tax_val">88389907</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🌐</div>
+          <div>
+            <div class="contact-label" data-i18n="c_web_label">官方網站</div>
+            <div class="contact-value"><a href="https://taiwanacrodance.zeabur.app/" target="_blank">taiwanacrodance.zeabur.app</a></div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="fname" data-i18n="form_name">您的姓名</label>
+          <input type="text" id="fname" name="name" required placeholder="" />
+        </div>
+        <div class="form-group">
+          <label for="femail" data-i18n="form_email">電子郵件</label>
+          <input type="email" id="femail" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="fsubject" data-i18n="form_subject">主旨</label>
+          <input type="text" id="fsubject" name="subject" />
+        </div>
+        <div class="form-group">
+          <label for="fmsg" data-i18n="form_msg">訊息內容</label>
+          <textarea id="fmsg" name="message" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" data-i18n="form_send">送出訊息</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer" aria-label="頁尾">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-area">
+          <div class="logo-placeholder">🎪</div>
+          <div>
+            <div class="brand-name">臺灣特技舞蹈協會</div>
+            <div class="brand-en">TAIWAN ACROBATIC DANCE ASSOCIATION</div>
+          </div>
+        </div>
+        <p class="footer-desc" data-i18n="footer_desc">致力推動台灣馬戲特技藝術發展，促進國際文化交流與合作。</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/people/臺灣特技舞蹈協會Taiwan-ACRO-DANCE-Association/100087128214641/" class="social-btn" aria-label="Facebook" title="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/tadaofficial.tw/" class="social-btn" aria-label="Instagram" title="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5.5" ry="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.youtube.com/@臺灣特技舞蹈協會-m6v" class="social-btn" aria-label="YouTube" title="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M23.5 6.2a3 3 0 0 0-2.11-2.13C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.39.52A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.11 2.13c1.89.52 9.39.52 9.39.52s7.5 0 9.39-.52a3 3 0 0 0 2.11-2.13A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/></svg>
+          </a>
+          <a href="mailto:taiwanacrodance.ep@gmail.com" class="social-btn" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_about">關於協會</h4>
+        <ul>
+          <li><a href="about.html" data-i18n="nav_intro">協會簡介</a></li>
+          <li><a href="charter.html" data-i18n="nav_charter">協會章程</a></li>
+          <li><a href="organization.html" data-i18n="nav_org">協會組織</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_service">服務項目</h4>
+        <ul>
+          <li><a href="news.html" data-i18n="nav_news">最新消息</a></li>
+          <li><a href="announcements.html" data-i18n="nav_announce">公告事項</a></li>
+          <li><a href="bigtop.html" data-i18n="footer_bigtop">特技大鼎 BIG TOP</a></li>
+          <li><a href="development.html" data-i18n="nav_dev">協會發展</a></li>
+          <li><a href="downloads.html" data-i18n="nav_download">表單下載</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_connect">聯絡資訊</h4>
+        <ul>
+          <li><a href="mailto:taiwanacrodance.ep@gmail.com">taiwanacrodance.ep@gmail.com</a></li>
+          <li><a href="https://taiwanacrodance.zeabur.app/" target="_blank">taiwanacrodance.zeabur.app</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">聯絡我們</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="copyright">版權所有 © 2026 <span class="assoc-name">臺灣特技舞蹈協會</span></p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>
