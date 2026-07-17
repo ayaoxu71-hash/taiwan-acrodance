@@ -335,6 +335,24 @@ section { padding: 100px 0; }
 }
 .btn-more:hover { background: var(--gold); color: var(--black); transform: translateY(-2px); }
 
+/* ===== NEWS 恭賀橫幅 ===== */
+.news-highlight {
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px; flex-wrap: wrap;
+  max-width: 920px; margin: 0 auto 40px; padding: 18px 30px;
+  background: linear-gradient(135deg, var(--orange), var(--gold));
+  color: #fff; border-radius: 14px;
+  font-weight: 700; font-size: clamp(15px, 1.55vw, 19px);
+  line-height: 1.65; text-align: center;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.18);
+  box-shadow: 0 12px 30px rgba(200,60,16,0.22);
+}
+.news-highlight .nh-icon { font-size: 26px; flex-shrink: 0; text-shadow: none; }
+@media (max-width: 640px) {
+  .news-highlight { gap: 8px; padding: 16px 18px; }
+  .news-highlight .nh-icon { font-size: 22px; }
+}
+
 /* ===== INTERNATIONAL ===== */
 #international { background: var(--black); position: relative; overflow: hidden; }
 #international::before {
