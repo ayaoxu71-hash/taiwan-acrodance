@@ -51,8 +51,8 @@ i18n.zh = Object.assign(i18n.zh, {
   role_super: '常務監事', role_supers: '監事'
 });
 i18n.en = Object.assign(i18n.en, {
-  about_tag: 'ABOUT US', about_title: 'About Taiwan Acrobatic Dance Association',
-  about_desc: 'Taiwan Acrobatic Dance Association was established in Taipei, founded in 2022 by 34 founding members including Chen Bi-Han, Lin Jia-Feng, and Li Xiao-Lei. The first general member assembly was held on August 28, 2022, and Lin Jia-Feng was elected as the first President.',
+  about_tag: 'ABOUT US', about_title: 'About Taiwan ACRO DANCE Association',
+  about_desc: 'Taiwan ACRO DANCE Association was established in Taipei, founded in 2022 by 34 founding members including Chen Bi-Han, Lin Jia-Feng, and Li Xiao-Lei. The first general member assembly was held on August 28, 2022, and Lin Jia-Feng was elected as the first President.',
   about_more: 'Read More',
   purpose1: 'A legally established non-profit social organization.',
   purpose2: 'Promoting acrobatic dance education and cultivating cross-domain performing arts talents.',

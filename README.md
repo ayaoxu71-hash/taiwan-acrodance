@@ -1,6 +1,6 @@
 # 臺灣特技舞蹈協會 官方網站
 
-Taiwan Acrobatic Dance Association — Official Website
+Taiwan ACRO DANCE Association — Official Website
 
 ## 技術架構
 - HTML5 + Vanilla CSS + JavaScript

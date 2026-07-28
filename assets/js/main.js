@@ -46,7 +46,7 @@ const i18n = {
     footer_bigtop: '特技大鼎 BIG TOP', c_web_label: '官方網站',
     hero_badge: '台灣 · 馬戲特技 · 國際交流',
     hero_title: '臺灣特技舞蹈協會',
-    hero_en: 'TAIWAN ACROBATIC DANCE ASSOCIATION',
+    hero_en: 'Taiwan ACRO DANCE Association',
     hero_slogan: '推展特技舞蹈教育，培育表演藝術跨域人才<br>建構專業證照，促進產業生態與國際交流',
     hero_btn1: '瞭解協會', hero_btn2: '最新消息',
     hero_scroll: 'SCROLL',
@@ -93,7 +93,7 @@ const i18n = {
     footer_bigtop: 'BIG TOP Awards', c_web_label: 'Official Website',
     hero_badge: 'TAIWAN · CIRCUS · INTERNATIONAL EXCHANGE',
     hero_title: '臺灣特技舞蹈協會',
-    hero_en: 'TAIWAN ACROBATIC DANCE ASSOCIATION',
+    hero_en: 'Taiwan ACRO DANCE Association',
     hero_slogan: 'Promoting Acrobatic Dance Education & Cross-domain Talent<br>Building Professional Certification & International Exchange',
     hero_btn1: 'About Us', hero_btn2: 'Latest News',
     hero_scroll: 'SCROLL',
@@ -115,7 +115,7 @@ const i18n = {
     news_more: 'View All News',
     intl_tag: 'GLOBAL STAGE', intl_title: 'International Exchange',
     intl_sub: 'Connecting the world, shining Taiwan\'s acrobatic arts globally',
-    intl_desc: 'Taiwan Acrobatic Dance Association actively promotes Taiwan\'s circus arts on the world stage, establishing partnerships with international organizations to enhance visibility and influence.',
+    intl_desc: 'Taiwan ACRO DANCE Association actively promotes Taiwan\'s circus arts on the world stage, establishing partnerships with international organizations to enhance visibility and influence.',
     stat1_num: '20+', stat1_label: 'Partner Countries',
     stat2_num: '50+', stat2_label: 'Int\'l Events',
     stat3_num: '10+', stat3_label: 'Partner Orgs',
@@ -131,7 +131,7 @@ const i18n = {
     form_msg: 'Message', form_send: 'Send via Email',
     footer_desc: 'Founded in 2022, TADA promotes acrobatic dance education, cross-domain talent, professional certification and international cultural exchange.',
     footer_about: 'About', footer_service: 'Services', footer_connect: 'Contact',
-    copyright: 'Copyright © 2026 <span class="assoc-name">Taiwan Acrobatic Dance Association</span>'
+    copyright: 'Copyright © 2026 <span class="assoc-name">Taiwan ACRO DANCE Association</span>'
   }
 };
 

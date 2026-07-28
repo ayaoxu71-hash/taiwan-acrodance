@@ -104,7 +104,7 @@ function initNav(activePage) {
       <div class="logo-placeholder">🎪</div>
       <div class="logo-text">
         <span class="zh">臺灣特技舞蹈協會</span>
-        <span class="en">TAIWAN ACROBATIC DANCE ASSOC.</span>
+        <span class="en">Taiwan ACRO DANCE Association</span>
       </div>
     </a>
     <div class="nav-menu" id="navMenu">
