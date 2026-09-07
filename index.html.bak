@@ -156,7 +156,7 @@
       </div>
       <div class="about-org reveal">
         <div class="org-card">
-          <h3 class="org-title" data-i18n="org_title">第二屆理監事</h3>
+          <h3 class="org-title" data-i18n="org_title"> 第二屆理監事</h3>
           <div class="org-list">
             <div class="org-row"><span class="org-role" data-i18n="role_chair">理事長</span><span class="org-name">林佳鋒</span></div>
             <div class="org-row"><span class="org-role" data-i18n="role_honor">榮譽顧問</span><span class="org-name">陳碧涵</span></div>
