@@ -1,3 +1,4 @@
+// build 20260907b - 第二屆理監事
 // ===== NEWS DATA =====
 const newsData = [
   {
